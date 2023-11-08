@@ -20,9 +20,10 @@ class BuscarcSpider(scrapy.Spider):
             print("##################\n",tag_t)
             if(autor_t=="Mark Twain" and "life" in tag_t):
                 print("\nok\n")
+                frase_t = frase.xpath('.//span[contains(@class,"text")]/text()').get()
                 item = {
                     'autor': autor_t,
                     'tags': tag_t,
-                    'frase': frase.xpath('.//span[contains(@class,"text")]/text()').get(),
+                    'frase': frase_t,
                 }
                 yield item
