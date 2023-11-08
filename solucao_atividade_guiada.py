@@ -2,7 +2,6 @@ import scrapy
 
 class BuscarcSpider(scrapy.Spider):
     name = "buscarG"
-    allowed_domains = ["quotesto.scrape.com"]
     start_urls = ["http://quotes.toscrape.com/tag/simile/"]
     global autor, frase
     global tags
